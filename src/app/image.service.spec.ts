@@ -6,8 +6,7 @@ describe('ImageService', () => {
   let service: ImageService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ImageService);
+    service = new ImageService();
   });
 
   it('should be created', () => {
@@ -40,5 +39,12 @@ describe('ImageService', () => {
       expect(img.brand).toBe('perro');
       expect(img.url).toBe('assets/images/perro2.jpg');
     });
+
+    it('Cuando se envíe un id que no está dentro de la lista, entonces debe retornar indefinido', () => {
+      const id = 8;
+      let res = service.getImage(id);
+      expect(res).toBeUndefined();
+    });
+
   });
 });
