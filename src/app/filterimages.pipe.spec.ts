@@ -35,7 +35,7 @@ describe('Debe filtrar por el nombre que se le pase', () => {
     pipe = new FilterimagesPipe();
   });
 
-  describe('Retornar la cantidad de imagenes por el filtro que se pase', () =>{
+  describe('transform(items: any[], laptop: string)', () =>{
     it('Retorna todo usando el filtro all y deben ser 5', () => {
       let filtro = pipe.transform(filtroAll, 'all');
       expect(filtro.length).toEqual(5);
@@ -52,7 +52,7 @@ describe('Debe filtrar por el nombre que se le pase', () => {
     });
   });
 
-  describe('Retorna según el filtro que se pase', () => {
+  describe('transform(items: any[], laptop: string)', () => {
     it('Retorna todo usando el filtro all', () => {
       let filtro = pipe.transform(filtroAll, 'all');
       expect(filtro).toEqual(filtroAll);
