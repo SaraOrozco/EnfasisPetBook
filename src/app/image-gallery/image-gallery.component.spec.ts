@@ -28,4 +28,15 @@ describe('ImageGalleryComponent', () => {
   it('Debe crearse', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('fixture',()=>{
+    it('Cuando se muestre el inicio debe tener 3 botones',()=>{
+      expect(fixture.nativeElement.querySelectorAll('.btn-success').length).toBe(3);
+    });
+
+    it('Cuando se muestre el inicio debe tener 5 imagenes',()=>{
+      expect(fixture.nativeElement.querySelectorAll('.img').length).toBe(5);
+    });
+
+  });
 });
